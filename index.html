@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammad Hilmi Kamil Sumantri — Profil</title>
+  <meta name="description" content="Profil pribadi Muhammad Hilmi Kamil Sumantri" />
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --accent:#06b6d4; /* cyan */
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1000px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071027 0%, #071121 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .wrap{width:100%;max-width:var(--maxw);}
+
+    header{
+      display:flex;align-items:center;gap:18px;margin-bottom:22px;
+    }
+    .avatar{
+      width:96px;height:96px;border-radius:18px;flex:0 0 96px;
+      background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#062024;box-shadow:0 6px 20px rgba(2,6,23,0.6);
+    }
+    h1{margin:0;font-size:22px}
+    p.lead{margin:2px 0 0;color:var(--muted);}
+
+    main{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start;}
+    @media (max-width:900px){main{grid-template-columns:1fr;}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6);}
+
+    /* Left column */
+    .intro{margin-bottom:12px}
+    .section{margin-bottom:18px}
+    .section h2{margin:0 0 10px;font-size:16px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap}
+    .badge{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-size:13px}
+
+    .projects{display:grid;gap:10px}
+    .project{padding:12px;border-radius:8px;background:rgba(255,255,255,0.02)}
+    .project h3{margin:0 0 6px;font-size:14px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+
+    /* Right column */
+    .meta-list{display:flex;flex-direction:column;gap:10px}
+    .meta-item{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02)}
+    .meta-item strong{display:block}
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .contact-item{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;background:linear-gradient(90deg, rgba(6,182,212,0.05), transparent)}
+    .contact-item button{margin-left:auto;background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px;color:var(--accent);cursor:pointer}
+
+    footer{text-align:center;margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* small interactions */
+    .cta{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#042026;text-decoration:none;font-weight:600}
+
+    /* simple floating decorative circles */
+    .decor{position:fixed;right:-120px;top:-80px;width:260px;height:260px;border-radius:50%;background:linear-gradient(135deg, rgba(6,182,212,0.08), rgba(96,165,250,0.06));filter:blur(36px);pointer-events:none}
+  </style>
+</head>
+<body>
+  <div class="decor" aria-hidden></div>
+
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden>MH</div>
+      <div>
+        <h1>Muhammad Hilmi Kamil Sumantri</h1>
+        <p class="lead">data diri</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT -->
+      <section>
+        <div class="card intro">
+          <h2>Tentang Saya</h2>
+          <p>Saya Adalah Mahasiswa Pens, Jurusan Teknik Informatika D3-PJJ</p>
+          <a class="cta" href="#contact" onclick="scrollToId(event,'contact')">Hubungi Saya</a>
+        </div>
+
+        <div class="card section">
+          <h2>Pendidikan</h2>
+          <div class="badges">
+              <span class="badge">Sekolah Dasar</span>
+              <span class="badge">Sekolah Menengah Pertama</span>
+            <span class="badge">Sekolah Menengah</span>
+            <span class="badge">UNIVERSITAS PENS</span>
+          
+          </div>
+          <hr style="margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+          <div>
+            <strong>Tanggal Lahir</strong>
+            <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+              <li>Januari, 08, 2007</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Kelebihan</h2>
+          <div class="skills" aria-hidden>
+            <div class="skill">Disiplin</div>
+            <div class="skill">Tanggung jawab</div>
+            <div class="skill">Pantang menyerah</div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Hobby</h2>
+          <div class="projects">
+            <div class="project">
+              <h3>Main Game</h3>
+              
+            </div>
+            <div class="project">
+              <h3>Membaca Novel</h3>
+            
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          Dibuat dengan ♡ — Edit teks ini untuk menyesuaikan profilmu.
+        </footer>
+      </section>
+
+      <!-- RIGHT -->
+      <aside>
+        <div class="card meta-list">
+          <div class="meta-item"><div><strong>Alamat</strong><div style="color:var(--muted);font-size:13px">Indonesia, Jakarta, JL.Budhi Swadaya</div></div></div>
+          <div class="meta-item"><div><strong>Telepon</strong><div style="color:var(--muted);font-size:13px">08889673533</div></div></div>
+          <div class="meta-item"><div><strong>Email</strong><div id="emailVal" style="color:var(--muted);font-size:13px">hilmikamil538@gmail.com</div></div></div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="card contact-list" id="contact">
+          <h2>Kontak & Sosial</h2>
+          <div class="contact-item">
+            <div>📧 Email</div>
+            <div style="color:var(--muted);font-size:13px">hilmikamil538@gmail.com</div>
+            <button onclick="copyEmail()" aria-label="Copy email">Salin</button>
+          </div>
+
+          <div class="contact-item">
+            <div>🌐 GitHub</div>
+            <div style="color:var(--muted);font-size:13px">https://github.com/hilmikamil538-beep</div>
+            <a class="cta" href="#" style="margin-left:auto;padding:6px 10px;font-size:13px">Buka</a>
+          </div>
+
+          
+
+        <div style="height:12px"></div>
+
+        
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    function copyEmail(){
+      const email = document.getElementById('emailVal').textContent.trim();
+      if(!navigator.clipboard) return alert('Clipboard API tidak tersedia.');
+      navigator.clipboard.writeText(email).then(()=>{
+        alert('Email disalin: ' + email);
+      }).catch(()=>alert('Gagal menyalin ke clipboard.'));
+    }
+    function scrollToId(e,id){e.preventDefault();document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+
+    // Small personalization helper: if user runs file locally, prompt to edit name
+    (function(){
+      const nameEl = document.querySelector('h1');
+      const stored = localStorage.getItem('profile_name');
+      if(stored){ nameEl.textContent = stored; }
+    })();
+  </script>
+</body>
+</html>
